@@ -17,17 +17,19 @@ class Div {
     }
     #if DEBUG
     static func createDivision(code:String, of size: Int) -> Div{
-        let div = Div(code:code)
+        let divisions = Div(code:code)
         
-        //loop as many times as the param size says to create students and add thme to the students property
-        
-        return div
+        for i in 1...size{
+                let student = Student(forename: "Firstname\(i)", surname: "Surname\(i)", bday: Date())
+                divisions.students.append(student)
+        }
+        return divisions
         
     }
     static let examples = [Div.createDivision(code: "vBY-1", of: 1),
                            Div.createDivision(code: "vCX-1", of: 12),
                            Div.createDivision(code: "vEY-1", of: 8),
-                           Div.createDivision(code: "mDY-1", of: 96),
-                           Div.createDivision(code: "vFW-1", of: 99)]
+                           Div.createDivision(code: "mDY-1", of: 6),
+                           Div.createDivision(code: "vFW-1", of: 9)]
     #endif
 }
