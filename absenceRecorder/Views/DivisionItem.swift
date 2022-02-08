@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DivisionView: View {
+struct DivisionItem: View {
     var division: Div
     
     var body: some View {
@@ -21,6 +21,6 @@ struct DivisionView: View {
 
 struct DivisionView_Previews: PreviewProvider {
     static var previews: some View {
-        DivisionView(division:Div(code:"vBY-1"))
+        DivisionItem(division:Div(code:"vBY-1"))
     }
 }
